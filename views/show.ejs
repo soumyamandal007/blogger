@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Tech And Stuff</title>
+         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/semantic.min.css">
+    </head>
+    <body>
+         <div class="ui secondary pointing menu container">
+          <a class="item " href="/blogs">
+            Blogs
+          </a>
+          <a class="item" href="/blogs/new">
+            New
+          </a>
+          <a class="item ">
+            Friends
+          </a>
+          <a class="item active">
+            Show
+          </a>
+          <div class="right menu">
+            <a class="ui item" href="/account">
+              Sign Up
+            </a>
+          
+            <a class="ui item" href="/logout">
+              Logout
+            </a>
+          </div>
+        </div>
+         <div class="ui main text container segment">
+            <div class="huge header"><%= blog.title %></div>
+            <div class="ui top attached ">
+                <div  class="item">
+                    <img class="ui centered rounded image" src="<%= blog.image %>">
+                    <div class="content">
+                        <span><%= blog.created %></span>
+                    </div>
+                    <div class="description">
+                        <p><%- blog.body %></p>
+                    </div>
+                    <a class="ui orange basic button" href="/blogs/<%= blog._id %>/edit">EDIT</a>
+                    <form action="/blogs/<%= blog.id %>?_method=DELETE" method="POST" style="display: inline;">
+                        <button class="ui red basic button">DELETE</button>
+                    </form>
+                </div>
+            </div>
+    
+         </div>
+
+        
+    </body>
+</html>

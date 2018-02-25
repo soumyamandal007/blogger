@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Tech And Science</title>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/semantic.min.css">
+       
+    </head>
+    <body>
+         <div class="ui secondary pointing menu container">
+          <a class="item " href="/blogs">
+            Blogs
+          </a>
+          <a class="item active" href="/blogs/new">
+            New
+          </a>
+          <a class="item ">
+            Friends
+          </a>
+          <a class="item">
+            Show
+          </a>
+          <div class="right menu">
+            <a class="ui item" href="/account">
+              Sign Up
+            </a>
+          
+            <a class="ui item" href="/logout">
+              Logout
+            </a>
+          </div>
+        </div>
+       <div class="ui main text container segment">
+        <div class="huge header">New Blog</div>
+            <form class="ui form" action="/blogs" method="POST">
+                <div class="field">
+                    <label class="">Title</label>
+                    <input type="text" placeholder="Title" name="blog[title]">
+                </div>
+                <div class="field">
+                    <label class="">Image</label>
+                    <input type="text" placeholder="Image" name="blog[image]">
+                </div>
+                <div class="field">
+                    <label class="">Blog Post</label>
+                    <textarea name="blog[body]"></textarea>
+                </div>
+                <div class="field">
+                    <label class="">Author</label>
+                    <input type="text" placeholder="Author" name="blog[author]">
+                </div>
+                  <input class="ui violet big basic button" type="submit">
+            </form>
+    </div>
+    </body>
+</html>
